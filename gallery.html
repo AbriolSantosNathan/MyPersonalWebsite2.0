@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <style>
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #aa0000;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .navbar ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .navbar li {
+            margin: 0 20px;
+        }
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding: 15px 20px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+        .navbar a:hover {
+            background-color: #fff;
+            color: #aa0000;
+            transform: scale(1.1);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px;
+            text-align: center;
+        }
+        .gallery-item {
+            background-color: rgba(0, 0, 0, 0.85);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.9);
+            transition: transform 0.3s ease;
+            width: 300px;
+            cursor: pointer;
+        }
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+        .gallery-item img {
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        h1 {
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+            margin-top: 20px;
+        }
+        h2 {
+            color: #ffd700;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9);
+        }
+        p {
+            line-height: 1.8;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #aa0000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            width: 100%;
+        }
+        @media (max-width: 600px) {
+            .navbar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="gunsattachment.html">Gun’s Attachments</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <h1>Call of Duty Mobile Guns</h1>
+
+    <section class="gallery">
+        <div class="gallery-item" onclick="openImage('ak-47.1.jpg')">
+            <h2>1. AK-47</h2>
+            <img src="ak-47.1.jpg" alt="AK-47" width="100%">
+            <p>The AK-47 is a powerful assault rifle with high damage and moderate recoil, ideal for medium-range combat.</p>
+        </div>
+
+        <div class="gallery-item" onclick="openImage('holger1.webp')">
+            <h2>2. Holger</h2>
+            <img src="holger1.webp" alt="Holger" width="100%">
+            <p>The Holger is categorized as an LMG because of its 100-round magazine.</p>
+        </div>
+
+        <div class="gallery-item" onclick="openImage('dlq1.webp')">
+            <h2>3. DL Q33</h2>
+            <img src="dlq1.webp" alt="DL Q33" width="100%">
+            <p>The DL Q33 is a bolt-action sniper rifle with excellent accuracy and one-shot kill potential at long range.</p>
+        </div>
+
+        <div class="gallery-item" onclick="openImage('ak117.jpg')">
+            <h2>4. AK117</h2>
+            <img src="ak117.jpg" alt="AK117" width="100%">
+            <p>The AK117 is a high-fire-rate assault rifle with low recoil, making it an excellent choice for fast-paced, close to mid-range combat.</p>
+        </div>
+
+        <div class="gallery-item" onclick="openImage('switchblade.jpg')">
+            <h2>5. Switchblade</h2>
+            <img src="switchblade.jpg" alt="Switchblade" width="100%">
+            <p>The Switchblade X9 is a high-mobility submachine gun with a fast fire rate and excellent close-range effectiveness.</p>
+        </div>
+
+        <div class="gallery-item" onclick="openImage('krm.jpg')">
+            <h2>6. KRM</h2>
+            <img src="krm.jpg" alt="KRM" width="100%">
+            <p>A pump-action shotgun in the Call of Duty series, known for its high damage and close-range effectiveness.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Call of Duty Mobile. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function openImage(src) {
+            window.open(src, '_blank');
+        }
+    </script>
+</body>
+</html>
